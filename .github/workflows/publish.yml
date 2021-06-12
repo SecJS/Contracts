@@ -1,4 +1,4 @@
-name: Core Publish
+name: Contracts Publish
 
 on:
   push:
