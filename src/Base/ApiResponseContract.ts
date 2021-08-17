@@ -13,5 +13,3 @@ export interface PaginatedResponse<TModel> {
   meta: PaginationMetaContract
   links: PaginationLinksContract
 }
-
-

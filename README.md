@@ -22,3 +22,9 @@ The intention behind this repository is to always maintain a `Contracts` project
 ```bash
 yarn add @secjs/contracts
 ```
+
+---
+
+## License
+
+Made with 🖤 by [jlenon7](https://github.com/jlenon7) :wave:

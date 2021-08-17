@@ -1,4 +1,4 @@
-name: Contracts Publish
+name: CD Contracts
 
 on:
   push:
@@ -11,14 +11,29 @@ jobs:
     runs-on: ubuntu-18.04
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
       - uses: actions/setup-node@v1
         with:
           node-version: '14.x'
           registry-url: 'https://registry.npmjs.org'
-      - run: yarn
-      - run: yarn build
-      - run: yarn publish --access public
+
+      - name: Download dependencies
+        run: yarn
+
+      - name: Transpile typescript to javascript
+        run: yarn build
+
+      - name: Automatic GitHub Release
+        uses: justincy/github-action-npm-release@2.0.1
+        id: release
+
+      - name: Publish to NPM Registry
+        run: yarn publish --access public
+        if: steps.release.outputs.released == 'true'
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
           name: Deploy
