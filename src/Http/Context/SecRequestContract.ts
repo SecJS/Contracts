@@ -1,4 +1,4 @@
-export interface SecRequest {
+export interface SecRequestContract {
   body: any
   ip: string
   params: any
