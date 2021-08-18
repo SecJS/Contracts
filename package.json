@@ -1,6 +1,6 @@
 {
   "name": "@secjs/contracts",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "license": "MIT",
   "author": "João Lenon",
   "repository": "https://github.com/SecJS/Contracts.git",
@@ -88,8 +88,8 @@
     }
   },
   "files": [
-    "src/*.d.ts",
-    "src/*.js",
+    "src/**/*.d.ts",
+    "src/**/*.js",
     "index.d.ts",
     "index.js"
   ],
