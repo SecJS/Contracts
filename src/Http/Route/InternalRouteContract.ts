@@ -1,6 +1,6 @@
 import { SecHandlerContract } from '../SecHandlerContract'
 
-export interface RouteContract {
+export interface InternalRouteContract {
   path: string
   method: string
   params: string[]

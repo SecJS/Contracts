@@ -1,4 +1,4 @@
-export interface SecResponse {
+export interface SecResponseContract {
   end(): void
   send(data?: any): void
   json(data?: any): void

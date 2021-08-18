@@ -1,5 +1,5 @@
-import { SecContext } from './Context/SecContext'
+import { SecContextContract } from './Context/SecContextContract'
 
 export interface SecHandlerContract {
-  (ctx: SecContext): Promise<any> | any
+  (ctx: SecContextContract): Promise<any> | any
 }
