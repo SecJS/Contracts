@@ -12,6 +12,7 @@ export * from './src/Base/ApiResponseContract'
 
 // Http
 export * from './src/Http/SecHandlerContract'
+export * from './src/Http/Context/SecNextContract'
 export * from './src/Http/Context/SecContextContract'
 export * from './src/Http/Context/SecRequestContract'
 export * from './src/Http/Context/SecResponseContract'
