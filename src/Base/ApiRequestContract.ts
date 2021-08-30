@@ -3,6 +3,7 @@ export interface ApiRequestContract {
   where?: WhereContract
   orderBy?: OrderByContract
   includes?: IncludesContract[]
+  otherQueries?: any
 }
 
 export interface IncludesContract {
