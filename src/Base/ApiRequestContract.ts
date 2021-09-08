@@ -14,9 +14,9 @@ export interface IncludesContract {
 }
 
 export interface WhereContract {
-  [key: string]: string | number | boolean | object
+  [key: string]: string | number | boolean | object | null
 }
 
 export interface OrderByContract {
-  [key: string]: 'ASC' | 'DESC'
+  [key: string]: 'ASC' | 'DESC' | 'asc' | 'desc'
 }
