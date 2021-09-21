@@ -1,4 +1,7 @@
-import { PaginationLinksContract, PaginationMetaContract } from './PaginationContract'
+import {
+  PaginationLinksContract,
+  PaginationMetaContract,
+} from './PaginationContract'
 
 export interface ApiResponseContract {
   code: string
