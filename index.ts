@@ -5,6 +5,8 @@ export * from './src/Utils/FS/FileContract'
 export * from './src/Utils/FS/DirectoryContract'
 
 // Base
+export * from './src/Base/ServiceContract'
+export * from './src/Base/ResourceContract'
 export * from './src/Base/PaginationContract'
 export * from './src/Base/RepositoryContract'
 export * from './src/Base/ApiRequestContract'

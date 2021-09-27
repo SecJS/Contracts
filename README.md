@@ -20,7 +20,7 @@ The intention behind this repository is to always maintain a `Contracts` project
 ## Installation
 
 ```bash
-yarn add @secjs/contracts
+npm install @secjs/contracts
 ```
 
 ---
