@@ -1,6 +1,6 @@
 {
   "name": "@secjs/contracts",
-  "version": "1.1.6",
+  "version": "1.1.7",
   "license": "MIT",
   "author": "João Lenon",
   "repository": "https://github.com/SecJS/Contracts.git",
@@ -10,11 +10,12 @@
     "build": "tsc",
     "lint:fix": "eslint \"{src,tests}/**/*.ts\" --fix"
   },
-  "dependencies": {},
   "devDependencies": {
     "@types/node": "14.17.0",
     "@typescript-eslint/eslint-plugin": "4.31.0",
     "@typescript-eslint/parser": "4.31.0",
+    "commitizen": "4.2.4",
+    "cz-conventional-changelog": "3.3.0",
     "eslint": "7.32.0",
     "eslint-config-prettier": "8.3.0",
     "eslint-config-standard": "16.0.3",
@@ -45,7 +46,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "prettier": {
@@ -108,9 +110,16 @@
     }
   },
   "files": [
-    "src/**/*.d.ts",
+    "src/*.js",
+    "src/*.d.ts",
     "src/**/*.js",
-    "index.d.ts",
-    "index.js"
-  ]
+    "src/**/*.d.ts",
+    "*.js",
+    "*.d.ts"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
 }
